@@ -1,278 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:isScrollContainer="false"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.Text.TextFragment"
-    android:orientation="vertical"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
     android:fillViewport="true"
-    android:id="@+id/scrollView">
+    android:isScrollContainer="false"
+    android:orientation="vertical"
+    tools:context=".ui.Text.TextFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--LinearLayout
+            style="@style/parent"
+            android:layout_height="70dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_login_bk"
+                android:gravity="center"
+                android:text="@string/title_dashboard"
+                android:textColor="@color/colorTitle"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </LinearLayout-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-    <LinearLayout
-        style="@style/parent"
-        android:orientation="vertical"
-        android:layout_height="70dp">
-        <TextView
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            style="@style/parent"
-            android:background="@drawable/ic_login_bk"
-            android:text="@string/title_dashboard"
-            android:textColor="@color/colorTitle"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textSize="25sp"/>
-    </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="News category"
-                    android:textSize="20sp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:textColor="@color/colorSubtitle"
-                    android:textStyle="bold"/>
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp">
-                        <LinearLayout
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:clickable="true"
-                            android:id="@+id/category1"
-                            android:layout_marginRight="25dp">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="80dp"
-                                android:src="@drawable/koreatimes"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:textColor="#000000"
-                                android:textSize="13dp"
-                                android:layout_marginTop="5dp"
-                                android:textStyle="bold"
-                                android:text="National" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:clickable="true"
-                            android:id="@+id/category2"
-                            android:layout_marginRight="25dp">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="80dp"
-                                android:src="@drawable/abcnews"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
-                                android:textColor="#000000"
-                                android:textSize="13dp"
-                                android:textStyle="bold"
-                                android:text="Business" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="110dp"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:clickable="true"
-                            android:id="@+id/category3"
-                            android:layout_marginRight="25dp">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="80dp"
-                                android:src="@drawable/koreaherald"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
-                                android:textStyle="bold"
-                                android:textColor="#000000"
-                                android:textSize="13dp"
-                                android:text="Finance" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="100dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:clickable="true"
-                            android:id="@+id/category4"
-                            android:layout_marginRight="25dp">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="80dp"
-                                android:src="@drawable/bbc"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
-                                android:textColor="#000000"
-                                android:textSize="13dp"
-                                android:textStyle="bold"
-                                android:text="Life&amp;Style" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="100dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:clickable="true"
-                            android:id="@+id/category5"
-                            android:layout_marginRight="25dp">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="80dp"
-                                android:src="@drawable/reuters"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
-                                android:textSize="13dp"
-                                android:textColor="#000000"
-                                android:textStyle="bold"
-                                android:text="Entertainment" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="100dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:clickable="true"
-                            android:id="@+id/category6"
-                            android:layout_marginRight="25dp">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="80dp"
-                                android:src="@drawable/reuters"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
-                                android:textSize="13dp"
-                                android:textColor="#000000"
-                                android:textStyle="bold"
-                                android:text="Sports" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="100dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:clickable="true"
-                            android:id="@+id/category7"
-                            android:layout_marginRight="25dp">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="80dp"
-                                android:src="@drawable/reuters"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
-                                android:textSize="13dp"
-                                android:textColor="#000000"
-                                android:textStyle="bold"
-                                android:text="World" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="100dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:clickable="true"
-                            android:id="@+id/category8"
-                            android:layout_marginRight="25dp">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="80dp"
-                                android:src="@drawable/reuters"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
-                                android:textSize="13dp"
-                                android:textColor="#000000"
-                                android:textStyle="bold"
-                                android:text="Opinion" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="100dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:clickable="true"
-                            android:id="@+id/category9"
-                            android:layout_marginRight="25dp">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="80dp"
-                                android:src="@drawable/reuters"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
-                                android:textSize="13dp"
-                                android:textColor="#000000"
-                                android:textStyle="bold"
-                                android:text="K-POP" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </HorizontalScrollView>
-            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_margin="15dp"
                 android:orientation="horizontal">
                 <EditText
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
                     android:id="@+id/et_search"
-                    android:hint="News Search"/>
-                <Button
-                    android:layout_width="80dp"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:text="Search"
-                    android:id="@+id/search"/>
-                <Button
-                    android:layout_width="70dp"
-                    android:layout_height="match_parent"
-                    android:text="Input"
-                    android:id="@+id/input"/>
-            </LinearLayout>
-                <ListView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:id="@+id/NewsListView"
-                    android:layout_weight="1"
-                    android:layout_margin="10dp"
-                    android:dividerHeight="10dp"
-                    android:divider="#ffffff"
-                    />
+                    android:layout_weight="2"
+                    android:fontFamily="@font/nanumrfont"
+                    android:hint="Keyword" />
 
+                <Button
+                    android:id="@+id/search"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumrfont"
+                    android:text="Search" />
+
+                <Button
+                    android:id="@+id/input"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumrfont"
+                    android:text="Input" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/herald"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:fontFamily="@font/nanumbfont"
+                android:textSize="22sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="7dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/category1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:fontFamily="@font/nanumbfont"
+                        android:text="National" />
+                    <Button
+                        android:id="@+id/category2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/nanumbfont"
+                        android:background="@null"
+                        android:text="Business" />
+
+                    <Button
+                        android:id="@+id/category3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:fontFamily="@font/nanumbfont"
+                        android:text="Finance" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/category4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:fontFamily="@font/nanumbfont"
+                        android:text="Life&amp;Style" />
+                    <Button
+                        android:id="@+id/category5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:fontFamily="@font/nanumbfont"
+                        android:text="Entertainment" />
+                    <Button
+                        android:id="@+id/category6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:fontFamily="@font/nanumbfont"
+                        android:text="Sports" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/category7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:fontFamily="@font/nanumbfont"
+                        android:text="World" />
+                    <Button
+                        android:id="@+id/category8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:fontFamily="@font/nanumbfont"
+                        android:text="Opinion" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latest News"
+                android:fontFamily="@font/nanumbfont"
+                android:textSize="22sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="7dp" />
+            <ListView
+                android:id="@+id/NewsListView"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:divider="#ffffff"
+                android:dividerHeight="10dp" />
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
+</ScrollView>

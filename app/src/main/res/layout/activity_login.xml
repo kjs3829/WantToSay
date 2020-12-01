@@ -25,6 +25,7 @@
                     android:textColor="@color/whiteTextColor"
                     android:textStyle="bold"
                     android:gravity="center"
+                    android:fontFamily="@font/nanumbfont"
                     android:textSize="25dp"/>
             </LinearLayout>
             <LinearLayout
@@ -40,12 +41,14 @@
                     android:text="LOGIN"
                     android:textColor="@color/colorAccent"
                     android:textSize="25dp"
+                    android:fontFamily="@font/nanumbfont"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Id"
+                    android:text="ID"
                     android:layout_marginLeft="35dp"
+                    android:fontFamily="@font/nanumbfont"
                     android:layout_marginTop="25dp"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold"/>
@@ -55,7 +58,8 @@
                     android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="35dp"
-                    android:hint="Enter Id"
+                    android:hint="Enter ID"
+                    android:fontFamily="@font/nanumrfont"
                     android:layout_marginTop="3dp"
                     android:padding="15dp"
                     android:backgroundTint="@color/colorAccent"
@@ -64,6 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Password"
+                    android:fontFamily="@font/nanumbfont"
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="30dp"
                     android:textColor="@color/colorAccent"
@@ -75,6 +80,7 @@
                     android:layout_marginLeft="35dp"
                     android:hint="Enter Password"
                     android:inputType="textPassword"
+                    android:fontFamily="@font/nanumrfont"
                     android:layout_marginTop="3dp"
                     android:padding="15dp"
                     android:backgroundTint="@color/colorAccent"
@@ -88,6 +94,7 @@
                     android:layout_marginTop="40dp"
                     android:background="@drawable/loginbutton"
                     android:text="LOGIN"
+                    android:fontFamily="@font/nanumbfont"
                     android:textColor="#ffffff"
                     android:textSize="16dp" />
 
@@ -98,6 +105,7 @@
                 android:textSize="14dp"
                 android:layout_marginTop="20dp"
                 android:text="Sign Up"
+                android:fontFamily="@font/nanumrfont"
                 android:id="@+id/registerButton"/>
         </LinearLayout>
         </LinearLayout>

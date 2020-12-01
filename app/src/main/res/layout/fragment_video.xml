@@ -6,227 +6,278 @@
     android:layout_height="match_parent"
     tools:context=".ui.Video.VideoFragment"
     android:orientation="vertical">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="match_parent"
-            android:id="@+id/et_search"
-            android:hint="Youtube Search"/>
-        <Button
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Search"
-            android:id="@+id/btn_search"/>
-    </LinearLayout>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_margin="15dp">
+            <EditText
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:id="@+id/et_search"
+                android:fontFamily="@font/nanumrfont"
+                android:hint="Search on YouTube"/>
+            <Button
+                android:layout_marginLeft="2dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:fontFamily="@font/nanumrfont"
+                android:id="@+id/btn_search"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘의 추천 영상"
+                android:fontFamily="@font/nanumbfont"
+                android:textSize="22sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="7dp"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="17dp">
+                    <LinearLayout
+                        android:layout_width="230dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:id="@+id/proposal1"
+                        android:layout_marginRight="25dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@mipmap/ic_launcher_round" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:text="We Bare Bears - Cannot be Parted"
+                            android:fontFamily="@font/nanumrfont"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="230dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:id="@+id/proposal2"
+                        android:layout_marginRight="25dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@mipmap/ic_launcher_round"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Log Ride | Minisode | We Bare Bears | Cartoon Network"
+                            android:textSize="18sp"
+                            android:gravity="center_horizontal"
+                            android:fontFamily="@font/nanumrfont"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="230dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:id="@+id/proposal3"
+                        android:layout_marginRight="34dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@mipmap/ic_launcher_round"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Panda's Dream | Minisode | We Bare Bears | Cartoon Network"
+                            android:textSize="18sp"
+                            android:gravity="center_horizontal"
+                            android:fontFamily="@font/nanumrfont"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="오늘의 추천 영상"
-                    android:textSize="25sp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="10dp"/>
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-                        <LinearLayout
-                            android:layout_width="230dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:clickable="true"
-                            android:id="@+id/proposal1"
-                            android:layout_marginRight="25dp">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="150dp"
-                                android:src="@drawable/youtube1"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="We Bare Bears Season1"
-                                android:textSize="20sp"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="230dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:clickable="true"
-                            android:id="@+id/proposal2"
-                            android:layout_marginRight="25dp">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="150dp"
-                                android:src="@drawable/youtube2"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="We Bare Bears Season2"
-                                android:textSize="20sp"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="230dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:clickable="true"
-                            android:id="@+id/proposal3"
-                            android:layout_marginRight="25dp">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="150dp"
-                                android:src="@drawable/youtube3"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="We Bare Bears Season3"
-                                android:textSize="20sp"/>
-                        </LinearLayout>
-                    </LinearLayout>
-                </HorizontalScrollView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="추천 채널"
-                    android:textSize="25sp"/>
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
+                    android:fontFamily="@font/nanumbfont"
+                    android:textSize="22sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom ="7dp" />
+                    <TableLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-                        <LinearLayout
-                            android:layout_width="200dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
+                        android:layout_height="wrap_content">
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
                             <LinearLayout
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="100dp"
                                 android:orientation="horizontal"
+                                android:layout_weight="1"
                                 android:clickable="true"
                                 android:id="@+id/btn_channel1">
-                                <ImageView
-                                    android:layout_width="80dp"
-                                    android:layout_height="match_parent"
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
                                     android:src="@drawable/domics"/>
                                 <TextView
                                     android:layout_marginTop="30dp"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nanumbfont"
                                     android:text="Domics"
-                                    android:textSize="20sp"/>
+                                    android:textSize="15sp"/>
                             </LinearLayout>
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="100dp">
-                                <ImageView
-                                    android:layout_width="80dp"
-                                    android:layout_height="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_height="100dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:clickable="true"
+                                android:id="@+id/btn_channel2">
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
                                     android:src="@drawable/doctor_mike"/>
                                 <TextView
                                     android:layout_marginTop="30dp"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:text="Doctor Mike"
-                                    android:textSize="20sp"/>
+                                    android:fontFamily="@font/nanumbfont"
+                                    android:textSize="15sp"/>
                             </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="200dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
                             <LinearLayout
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="100dp"
-                                android:orientation="horizontal">
-                                <ImageView
-                                    android:layout_width="80dp"
-                                    android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:clickable="true"
+                                android:layout_weight="1"
+                                android:id="@+id/btn_channel3">
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="60dp"
+                                    android:layout_gravity="center"
+                                    android:layout_height="60dp"
                                     android:src="@drawable/terry_tv"/>
                                 <TextView
                                     android:layout_marginTop="30dp"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="Terry TV"
-                                    android:textSize="20sp"/>
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="TerryTV"
+                                    android:fontFamily="@font/nanumbfont"
+                                    android:textSize="15sp"/>
                             </LinearLayout>
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="100dp">
-                                <ImageView
-                                    android:layout_width="80dp"
-                                    android:layout_height="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_height="100dp"
+                                android:orientation="horizontal"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:id="@+id/btn_channel4">
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="60dp"
+                                    android:layout_gravity="center"
+                                    android:layout_height="60dp"
                                     android:src="@drawable/jenn_im"/>
                                 <TextView
                                     android:layout_marginTop="30dp"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="Jenn_Im"
-                                    android:textSize="20sp"/>
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jenn Im"
+                                    android:fontFamily="@font/nanumbfont"
+                                    android:textSize="15sp"/>
                             </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="200dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
+                        </TableRow>
+                        <TableRow
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent">
                             <LinearLayout
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="100dp"
-                                android:orientation="horizontal">
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:src="@mipmap/ic_launcher_round"/>
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:clickable="true"
+                                android:id="@+id/btn_channel5">
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/nigahiga"/>
                                 <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="Title"/>
+                                    android:layout_marginTop="30dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nigahiga"
+                                    android:fontFamily="@font/nanumbfont"
+                                    android:textSize="15sp"/>
                             </LinearLayout>
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="100dp">
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:src="@mipmap/ic_launcher_round"/>
+                                android:layout_width="0dp"
+                                android:layout_height="100dp"
+                                android:orientation="horizontal"
+                                android:clickable="true"
+                                android:layout_weight="1"
+                                android:id="@+id/btn_channel6">
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/wong_fu_production"/>
                                 <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="Title"/>
+                                    android:layout_marginTop="30dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Wong Fu Productions"
+                                    android:fontFamily="@font/nanumbfont"
+                                    android:textSize="15sp"/>
                             </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-                </HorizontalScrollView>
+                        </TableRow>
+                    </TableLayout>
             </LinearLayout>
         </LinearLayout>
-
-    </ScrollView>
-
+</ScrollView>
 </LinearLayout>

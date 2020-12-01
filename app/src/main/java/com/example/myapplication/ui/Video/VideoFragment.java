@@ -34,6 +34,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class VideoFragment extends Fragment {
     private String API_KEY = "AIzaSyAAaQdcl-dL4-6CKH1KtPybdnCeHRiftcE";
@@ -42,6 +43,11 @@ public class VideoFragment extends Fragment {
     private LinearLayout proposal2;
     private LinearLayout proposal3;
     private LinearLayout btn_channel1;
+    private LinearLayout btn_channel2;
+    private LinearLayout btn_channel3;
+    private LinearLayout btn_channel4;
+    private LinearLayout btn_channel5;
+    private LinearLayout btn_channel6;
     private Button btn_search;
     private EditText et_search;
 
@@ -54,6 +60,11 @@ public class VideoFragment extends Fragment {
         proposal2 = root.findViewById(R.id.proposal2);
         proposal3 = root.findViewById(R.id.proposal3);
         btn_channel1 = root.findViewById(R.id.btn_channel1);
+        btn_channel2 = root.findViewById(R.id.btn_channel2);
+        btn_channel3 = root.findViewById(R.id.btn_channel3);
+        btn_channel4 = root.findViewById(R.id.btn_channel4);
+        btn_channel5 = root.findViewById(R.id.btn_channel5);
+        btn_channel6 = root.findViewById(R.id.btn_channel6);
         btn_search = root.findViewById(R.id.btn_search);
         et_search = root.findViewById(R.id.et_search);
 
@@ -75,6 +86,91 @@ public class VideoFragment extends Fragment {
         btn_channel1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try {
+                    ArrayList<String> result = new YoutubeSearchAsyncTask().execute("Domics channel").get();
+                    Intent intent = new Intent(v.getContext(),YoutubeListActivity.class);
+                    intent.putExtra("videoList",result);
+                    startActivity(intent);
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        btn_channel2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    ArrayList<String> result = new YoutubeSearchAsyncTask().execute("Doctor Mike channel").get();
+                    Intent intent = new Intent(v.getContext(),YoutubeListActivity.class);
+                    intent.putExtra("videoList",result);
+                    startActivity(intent);
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        btn_channel3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    ArrayList<String> result = new YoutubeSearchAsyncTask().execute("TerryTV channel").get();
+                    Intent intent = new Intent(v.getContext(),YoutubeListActivity.class);
+                    intent.putExtra("videoList",result);
+                    startActivity(intent);
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        btn_channel4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    ArrayList<String> result = new YoutubeSearchAsyncTask().execute("Jenn Im channel").get();
+                    Intent intent = new Intent(v.getContext(),YoutubeListActivity.class);
+                    intent.putExtra("videoList",result);
+                    startActivity(intent);
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        btn_channel5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    ArrayList<String> result = new YoutubeSearchAsyncTask().execute("Nigahiga channel").get();
+                    Intent intent = new Intent(v.getContext(),YoutubeListActivity.class);
+                    intent.putExtra("videoList",result);
+                    startActivity(intent);
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        btn_channel6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    ArrayList<String> result = new YoutubeSearchAsyncTask().execute("Wong Fu Productions channel").get();
+                    Intent intent = new Intent(v.getContext(),YoutubeListActivity.class);
+                    intent.putExtra("videoList",result);
+                    startActivity(intent);
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -82,33 +178,39 @@ public class VideoFragment extends Fragment {
         proposal1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(v.getContext(), YoutubeEduActivity.class);
-                startActivity(intent);
+                String video_id = "CHU-MESkMQI";
+                String video_title = "We Bare Bears - Cannot be Parted (Clip) HD with Subs";
+                Intent intent1 = new Intent(v.getContext(), YoutubeSelectedActivity.class);
+                intent1.putExtra("video_id",video_id);
+                intent1.putExtra("video_title",video_title);
+                startActivity(intent1);
             }
-        });/*
+        });
+
         proposal2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), YoutubeActivity.class);
-                startActivity(intent);
+                String video_id = "zk85Zdx4siQ";
+                String video_title = "Log Ride | Minisode | We Bare Bears | Cartoon Network";
+                Intent intent1 = new Intent(v.getContext(), YoutubeSelectedActivity.class);
+                intent1.putExtra("video_id",video_id);
+                intent1.putExtra("video_title",video_title);
+                startActivity(intent1);
             }
         });
+
         proposal3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), YoutubeActivity.class);
-                startActivity(intent);
+                String video_id = "g_k9w-gW12c";
+                String video_title = "Panda's Dream | Minisode | We Bare Bears | Cartoon Network";
+                Intent intent1 = new Intent(v.getContext(), YoutubeSelectedActivity.class);
+                intent1.putExtra("video_id",video_id);
+                intent1.putExtra("video_title",video_title);
+                startActivity(intent1);
             }
-        });*/
-        /*
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });*/
+        });
+
         return root;
     }
 
@@ -140,7 +242,7 @@ public class VideoFragment extends Fragment {
                 search.setKey(API_KEY);
 
                 search.setQ(search_text);
-                //search.setChannelId("UCk9GmdlDTBfgGRb7vXeRMoQ"); //레드벨벳 공식 유투브 채널
+
                 search.setOrder("relevance"); //date relevance
 
                 search.setType("video");
@@ -177,7 +279,6 @@ public class VideoFragment extends Fragment {
                 System.out.println(" There aren't any results for your query.");
             }
 
-            StringBuilder sb = new StringBuilder();
             ArrayList<String> VideoInfo = new ArrayList<String>();
 
             while (iteratorSearchResults.hasNext()) {
@@ -187,7 +288,7 @@ public class VideoFragment extends Fragment {
                 // Double checks the kind is video.
                 if (rId.getKind().equals("youtube#video")) {
                     Thumbnail thumbnail = (Thumbnail) singleVideo.getSnippet().getThumbnails().get("default");
-                    //sb.append("ID : " + rId.getVideoId() + " , 제목 : " + singleVideo.getSnippet().getTitle() + " , 썸네일 주소 : " + thumbnail.getUrl());
+
                     VideoInfo.add(rId.getVideoId());
                     VideoInfo.add(singleVideo.getSnippet().getTitle());
                     VideoInfo.add(thumbnail.getUrl());

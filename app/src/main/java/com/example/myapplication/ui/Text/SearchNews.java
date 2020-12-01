@@ -30,6 +30,8 @@ public class SearchNews extends AppCompatActivity {
 
     public String htmlPageUrl; //파싱할 홈페이지의 URL주소
 
+    int cnt=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +39,7 @@ public class SearchNews extends AppCompatActivity {
 
         Intent intent=getIntent();
         htmlPageUrl=intent.getStringExtra("url");
-
+        Log.d("@@@@@",htmlPageUrl);
         //리스트뷰 클
         newsListView = (ListView)findViewById(R.id.NewsListView);
         newsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

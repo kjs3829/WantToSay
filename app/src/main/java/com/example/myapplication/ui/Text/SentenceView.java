@@ -15,6 +15,7 @@ import com.example.myapplication.R;
 public class SentenceView extends LinearLayout {
     TextView englisthView;
     TextView koreanView;
+    TextView sttView;
     Button listen;
     Button test;
 
@@ -35,11 +36,15 @@ public class SentenceView extends LinearLayout {
         koreanView = (TextView)findViewById(R.id.koreanView);
         listen = (Button)findViewById(R.id.listen);
         test = (Button)findViewById(R.id.test);
+        sttView = (TextView)findViewById(R.id.sttView);
     }
     public void setEnglish(String english){
         englisthView.setText(english);
     }
     public void setKorean(String korean){
         koreanView.setText(korean);
+    }
+    public void setStt(String stt){
+        sttView.setText(stt);
     }
 }

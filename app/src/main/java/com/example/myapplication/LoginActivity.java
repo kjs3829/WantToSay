@@ -16,6 +16,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.myapplication.R;
+import com.example.myapplication.ui.profile.ProfileFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -46,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String userID = idText.getText().toString();
+                final String userID = idText.getText().toString();
                 String userPassword = passwordText.getText().toString();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
@@ -62,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
                                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                                intent.putExtra("userID",userID);
                                                 LoginActivity.this.startActivity(intent);
                                                 finish();
                                             }

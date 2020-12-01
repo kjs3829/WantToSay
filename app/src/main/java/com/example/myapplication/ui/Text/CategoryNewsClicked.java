@@ -4,18 +4,29 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.myapplication.PapagoAPI;
 import com.example.myapplication.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.util.concurrent.ExecutionException;
 
 public class CategoryNewsClicked extends Activity {
 
@@ -27,6 +38,7 @@ public class CategoryNewsClicked extends Activity {
     private String body="";
     private TextView context;
     private Button study;
+    private String clientId,clientSecret,apiURL;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -47,14 +59,21 @@ public class CategoryNewsClicked extends Activity {
 
         korean = (Button) findViewById(R.id.korean);
         english = (Button) findViewById(R.id.english);
+
         //한글로 보기
         korean.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(ko.equals("")) {
-                    //파파고 연결
-//                    new BackgroundTask().execute();
-                    context.setText(ko);
+                    try {
+                        en=context.getText().toString();
+                        ko = new PapagoAPI().execute(en).get();
+                        context.setText(ko);
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
                 else{
                     context.setText(ko);
@@ -77,11 +96,13 @@ public class CategoryNewsClicked extends Activity {
                         Intent intent = new Intent(getApplicationContext(), TextDoActivity.class);
                         intent.putExtra("title", titleString);
                         intent.putExtra("en", context.getText().toString());
+                        intent.putExtra("CP", 1);
                         startActivity(intent);
                     }
                 }
         );
     }
+
     private class JsoupAsyncTask extends AsyncTask<Void, Void, Void> {
 
         @Override

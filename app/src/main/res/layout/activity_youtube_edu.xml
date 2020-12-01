@@ -1,21 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".ui.Video.YoutubeEduActivity"
     android:orientation="vertical">
+
     <com.google.android.youtube.player.YouTubePlayerView
-        android:id="@+id/youtubeView"
+        android:id="@+id/youtube_view"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp" />
+        android:layout_marginTop="7dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Average : "
+            android:id="@+id/total_score"/>
+        <Button
+            android:id="@+id/end"
+            android:layout_marginLeft="15dp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/loginbutton"
+            android:text="학습완료"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/youtubeBtn"
-        android:layout_height="50dp"
-        android:layout_width="50dp"
-        android:text="Button" />
 
-
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorTitle"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="@font/nanumbfont"
+        android:text="스피커 버튼을 누르면 해당 위치로 이동합니다!"
+        android:layout_gravity="center"
+        android:id="@+id/tv"/>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

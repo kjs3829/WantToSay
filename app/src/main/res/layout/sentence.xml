@@ -3,42 +3,65 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="wrap_content" android:orientation="horizontal">
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginLeft="10dp">
-
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
         <TextView
             android:id="@+id/englishView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="English"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nanumrfont"
             android:textColor="@color/design_default_color_on_secondary"
-            android:textSize="24dp" />
+            android:textSize="18dp" />
         <TextView
-            android:id="@+id/koreanView"
+            android:id="@+id/sttView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="번역"
+            android:text="발음 입력"
+            android:fontFamily="@font/nanumrfont"
             android:layout_marginTop="3dp"
-            android:layout_marginBottom="7dp"
-            android:textSize="20dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="10dp"
+            android:textSize="15dp"
             android:textColor="@android:color/secondary_text_dark"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/koreanView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="번역"
+                android:fontFamily="@font/nanumrfont"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="10dp"
+                android:textSize="15dp"
+                android:textColor="@android:color/secondary_text_dark"/>
+            <Button
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:text=""
+                android:layout_toLeftOf="@id/test"
+                android:drawableRight="@drawable/ic_volume_up_black_24dp"
+                android:id="@+id/listen"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:text="발음평가"
+                android:drawableRight="@drawable/ic_mic_black_24dp"
+                android:fontFamily="@font/nanumrfont"
+                android:id="@+id/test"/>
+        </RelativeLayout>
 
     </LinearLayout>
-    <Button
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.5"
-        android:text="발음듣기"
-        android:id="@+id/listen"/>
-    <Button
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.5"
-        android:text="발음평가"
-        android:id="@+id/test"/>
-
-
 </LinearLayout>

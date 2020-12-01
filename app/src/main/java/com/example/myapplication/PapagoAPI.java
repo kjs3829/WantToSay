@@ -28,8 +28,8 @@ public class PapagoAPI extends AsyncTask<String,String,String> {
 
     @Override
     protected void onPreExecute() {
-        clientId = "NNhFtq5xWlxBtJmeId6o";//애플리케이션 클라이언트 아이디값";
-        clientSecret = "SmfXpKiGwJ";//애플리케이션 클라이언트 시크릿값";
+        clientId = "Ue4AzlA_Z5Ww0SGvpV5s";//애플리케이션 클라이언트 아이디값";
+        clientSecret = "umQ0H3abWB";//애플리케이션 클라이언트 시크릿값";
         apiURL = "https://openapi.naver.com/v1/papago/n2mt";
         super.onPreExecute();
     }
@@ -66,18 +66,7 @@ public class PapagoAPI extends AsyncTask<String,String,String> {
 
     @Override
     protected void onPostExecute(String result) {
-        /*
-        try {
-            JSONObject jObject = new JSONObject(result);
-            JSONObject messageObject = jObject.getJSONObject("message");
-            JSONObject resultObject = messageObject.getJSONObject("result");
-            String translatedText = resultObject.getString("translatedText");
-            textView.setText(translatedText);
-            tts.speak(translatedText,TextToSpeech.QUEUE_FLUSH,null);
-            super.onPostExecute(translatedText);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }*/
+
     }
 
     @Override
